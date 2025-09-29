@@ -456,7 +456,6 @@ class ObjectDetection(Ui_MainWindow):
         barcode_num = self.barcode_num
         # print(self.barcode)
         if str(barcode_num-1) == str(quantity_value) and str(lot_value) != " ":
-            # with psycopg2.connect(host="10.17.72.65", port=5432, user="postgres", password="postgres",database="iot") as connection:
             with psycopg2.connect(host="localhost", port=5432, user="postgres", password="postgres",database="postgres") as connection:
                 for bar in self.barcode:
                     with connection.cursor() as cursor:
